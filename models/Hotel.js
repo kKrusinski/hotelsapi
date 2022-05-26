@@ -1,7 +1,6 @@
-import mongoose from "mongoose";
-
-
-const HotelSchema = new mongoose.Schema({
+const mongoose = require("mongoose");
+const HotelSchema = new mongoose.Schema(
+  {
     name:{
         type: String,
         required: true
@@ -37,7 +36,7 @@ const HotelSchema = new mongoose.Schema({
     featured: {
         type:Boolean,
         deafult:false,
-    },
-});
+    }},
+);
 
 module.exports = mongoose.model("Hotel", HotelSchema);

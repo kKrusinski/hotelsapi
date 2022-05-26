@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 const RoomSchema = new mongoose.Schema(
   {
     title: {
@@ -13,13 +13,15 @@ const RoomSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    desc: {
+    description: {
       type: String,
       required: true,
     },
-    roomNumbers: [{ number: Number, unavailableDates: {type: [Date]}}],
+    roomNumbers:{
+        type:Number,
+        required:true,
+    },
   },
   { timestamps: true }
 );
-
 module.exports = mongoose.model("Room", RoomSchema);
