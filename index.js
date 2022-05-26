@@ -13,7 +13,7 @@ dotenv.config();
 
 mongoose.connect(
     process.env.MONGO_URL
-    ).then(()=>console.log("DBConnection is successsfull."))
+    ).then(()=>console.log("MongoDbConnection is successsfull."))
      .catch((error)=>{
          console.log(error);
      });
@@ -25,6 +25,7 @@ app.use("/api/users", userRoute);
 app.use("/api/hotels", hotelRoute);
 app.use("/api/rooms", roomRoute);
 app.use("/api/bills", billRoute);
+
 
 app.listen(process.env.PORT , ()=>{
     console.log(`Server is running and listening at port ${process.env.PORT}.`);

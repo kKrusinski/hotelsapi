@@ -65,7 +65,7 @@ router.get("/", verifyTokenAndAdmin, async (req, res) => {
 
    
 
-        //Get bill by date
+//Get bill by date
 router.get("/billByDate", verifyTokenAndAdmin, async (req, res) => {
       
     try {
