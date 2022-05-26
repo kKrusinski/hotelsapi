@@ -44,7 +44,7 @@ router.delete("/billById/:id", verifyTokenAndAdmin, async (req, res) => {
       
     
       //Bill get
-router.get("/billById/:orderId", verifyTokenAndAuthorization , async (req, res) => {
+router.get("/billById/:hotelId", verifyTokenAndAuthorization , async (req, res) => {
     try {
         const bills = await Bill.find({orderId: req.params.orderId});
         res.status(200).json(bills);
